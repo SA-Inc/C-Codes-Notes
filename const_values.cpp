@@ -4,6 +4,8 @@
 namespace constants {
   // by default internal linkage
   constexpr double gravity {9.8};
+
+  // if need string use constexpr std::string_view
 }
 
 // compile time const - all expressions and assigments while compiling
@@ -34,6 +36,11 @@ int num_enter() {
 }
 
 
+double calc_velocity(int time, double gravity) {
+    return gravity * time;
+}
+
+
 int main() {
   // symbolic constants
   // compile time const
@@ -55,6 +62,10 @@ int main() {
   // constexpr - only compile time
   constexpr int e {4 * 6 + 7};
   std::cout << e << std::endl;
+
+
+  // better pass const as argument, instead use const in function
+  calc_velocity(5, constants::gravity);
 
   return 0;
 }
