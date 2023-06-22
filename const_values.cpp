@@ -1,5 +1,11 @@
 #include <iostream>
 
+// if need constants can be used namespace wrapper
+namespace constants {
+  // by default internal linkage
+  constexpr double gravity {9.8};
+}
+
 // compile time const - all expressions and assigments while compiling
 // runtime const - expressions and assigments while program running
 
