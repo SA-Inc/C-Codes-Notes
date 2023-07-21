@@ -127,5 +127,10 @@ int main() {
   // actualy struct has 14 bytes, but 2 bytes adding by compiler for padding and data alignment
   std::cout << "struct size: " << sizeof(pad) << " bytes" << std::endl;
 
+
+  // pointer to struct
+  Fraction* ptr {&a};
+  std::cout << "pointer: " << (*ptr).numerator << " " << ptr -> denominator << std::endl;
+
   return 0;
 }
